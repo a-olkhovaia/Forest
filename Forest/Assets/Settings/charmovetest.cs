@@ -33,4 +33,15 @@ public class PF : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         transform.localRotation = Quaternion.Euler(0, 180, 0);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Equals("Platform"))
+        {
+            this.transform.parent = collision.transform;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        transform.parent = null;
+    }
 }
