@@ -4096,11 +4096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e090f00ce6734c8489a572f8cd4481cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.81
+      value: -9.73
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e090f00ce6734c8489a572f8cd4481cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.26
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: e090f00ce6734c8489a572f8cd4481cf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4241,6 +4241,7 @@ MonoBehaviour:
   jumpheight: 3
   groundCheck: {fileID: 0}
   moving: 0
+  istalking: 0
 --- !u!1 &1603185720
 GameObject:
   m_ObjectHideFlags: 0
