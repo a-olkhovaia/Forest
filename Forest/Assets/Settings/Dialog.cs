@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
     [SerializeField] private string[] lines;
     [SerializeField] private float appearSpeed;
     [SerializeField] private TextMeshProUGUI[] text = new TextMeshProUGUI[2];
+    [SerializeField] private GameObject button;
     private int idx;
     private int CurrentText;
 
@@ -19,6 +21,7 @@ public class Dialog : MonoBehaviour
         text[0].text = "";
         text[1].text = "";
         gameObject.SetActive(false);
+        button.SetActive(false);
     }
 
     private void Update()
@@ -49,7 +52,11 @@ public class Dialog : MonoBehaviour
             StartCoroutine(LineByChar(lines, text));
             idx++;
         }
-        else Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject);
+            Destroy(button);
+        }
     }
 
 }
