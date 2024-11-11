@@ -12,6 +12,8 @@ public class PF : MonoBehaviour
     bool isGrounded;
     public bool moving;
     private Animator anim;
+    public bool istalking;
+    private float movspeed;
     void Start()    
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,18 +21,19 @@ public class PF : MonoBehaviour
     }
     void Update()
     {
+        if (istalking) movspeed = 0; else movspeed = Input.GetAxis("Horizontal");
         Flip();
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space))
+        rb.velocity = new Vector2(movspeed * speed, rb.velocity.y);
+        if (Input.GetKeyDown(KeyCode.Space) && !istalking)
             rb.AddForce(transform.up * jumpheight, ForceMode2D.Impulse);
         moving = rb.velocity.x != 0 ?true:false;
         anim.SetBool("ismoving", moving);
     }
     void Flip()
     {
-        if (Input.GetAxis("Horizontal") > 0)
+        if (movspeed > 0)
         transform.localRotation = Quaternion.Euler(0, 0, 0);
-        if (Input.GetAxis("Horizontal") < 0)
+        if (movspeed < 0)
         transform.localRotation = Quaternion.Euler(0, 180, 0);
     }
     private void OnCollisionEnter2D(Collision2D collision)
