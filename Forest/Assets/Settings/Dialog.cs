@@ -13,7 +13,6 @@ public class Dialog : MonoBehaviour
     [SerializeField] private GameObject button;
     private int idx;
     private int CurrentText;
-
     private void Start()
     {
         idx = 0;
@@ -22,6 +21,7 @@ public class Dialog : MonoBehaviour
         text[1].text = "";
         gameObject.SetActive(false);
         button.SetActive(false);
+        
     }
 
     private void Update()
@@ -56,6 +56,7 @@ public class Dialog : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(button);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PF>().istalking = false;
         }
     }
 

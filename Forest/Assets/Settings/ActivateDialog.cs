@@ -14,6 +14,8 @@ public class ActivateDialog : MonoBehaviour
         {
             DialogCanvas.SetActive(true);
             Button.SetActive(true);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PF>().istalking = true;
+
         }
         var rb = other.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, 0);
