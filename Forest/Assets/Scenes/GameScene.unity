@@ -3674,8 +3674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6388, y: 0.062}
-  m_SizeDelta: {x: 2.1173, y: 1.2314}
+  m_AnchoredPosition: {x: 2.5347, y: -0.00000041723}
+  m_SizeDelta: {x: 2.9467, y: 3.0924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1358117440 stripped
 Transform:
@@ -5415,7 +5415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - qwe
+  - "\u041F\u0440\u0438\u0432\u0435\u0442! \u041A\u0442\u043E \u0442\u044B ? \u0442\u044B
+    \u043F\u043E\u043C\u043E\u0436\u0435\u0448\u044C \u043D\u0430\u0439\u0442\u0438
+    \u043C\u043E\u0438\u0445 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439?"
   - rty
   - asd
   - zxc
@@ -5543,8 +5545,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.3534, y: -0.5036}
-  m_SizeDelta: {x: 5.3972, y: 1.3395}
+  m_AnchoredPosition: {x: 2.8636, y: 0.5424}
+  m_SizeDelta: {x: 8.4176, y: 3.4315}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &2019492132 stripped
 Transform:
@@ -5795,8 +5797,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.35, y: 0.0785}
-  m_SizeDelta: {x: 2.0426, y: 1.1984}
+  m_AnchoredPosition: {x: -2.1158, y: 0.0000000074506}
+  m_SizeDelta: {x: 2.971, y: 3.0924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2056763761
 GameObject:
