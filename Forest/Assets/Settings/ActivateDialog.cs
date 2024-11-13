@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Callbacks;
 using UnityEngine;
 
 public class ActivateDialog : MonoBehaviour
@@ -16,7 +13,7 @@ public class ActivateDialog : MonoBehaviour
             Button.SetActive(true);
         }
         var rb = other.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, 0);
-
+        var pf = other.GetComponent<PF>();
+        pf.istalking = true;
     }
 }

@@ -14,7 +14,8 @@ public class PF : MonoBehaviour
     private Animator anim;
     public bool istalking;
     private float movspeed;
-    void Start()    
+
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -26,15 +27,15 @@ public class PF : MonoBehaviour
         rb.velocity = new Vector2(movspeed * speed, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space) && !istalking)
             rb.AddForce(transform.up * jumpheight, ForceMode2D.Impulse);
-        moving = rb.velocity.x != 0 ?true:false;
+        moving = rb.velocity.x != 0 ? true : false;
         anim.SetBool("ismoving", moving);
     }
     void Flip()
     {
         if (movspeed > 0)
-        transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         if (movspeed < 0)
-        transform.localRotation = Quaternion.Euler(0, 180, 0);
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -5424,6 +5424,7 @@ MonoBehaviour:
   - {fileID: 2039129921}
   - {fileID: 1277661391}
   button: {fileID: 537011370}
+  character: {fileID: 1576319755}
 --- !u!114 &1947099383
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,9 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Dialog : MonoBehaviour
 {
@@ -11,6 +8,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] private float appearSpeed;
     [SerializeField] private TextMeshProUGUI[] text = new TextMeshProUGUI[2];
     [SerializeField] private GameObject button;
+    [SerializeField] private GameObject character;
     private int idx;
     private int CurrentText;
 
@@ -31,7 +29,6 @@ public class Dialog : MonoBehaviour
             StopAllCoroutines();
             NextLine(lines, text[CurrentText]);
             CurrentText = CurrentText == 1 ? 0 : 1;
-
         }
     }
 
@@ -56,7 +53,8 @@ public class Dialog : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(button);
+            var pf = character.GetComponent<PF>();
+            pf.istalking = false;
         }
     }
-
 }
