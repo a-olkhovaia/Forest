@@ -65,12 +65,14 @@ public class PatrolBehavior : MonoBehaviour
         if (movingRight)
         {
             transform.position = new Vector2(transform.position.x + speed * Time.deltaTime, transform.position.y);
-        } 
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
         else
         {
             transform.position = new Vector2(transform.position.x - speed * Time.deltaTime, transform.position.y);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
-            
+
     }
 
     void Pursue()
