@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Points (for monsters)
   - Monster
+  - MovableObject
   layers:
   - Default
   - TransparentFX
