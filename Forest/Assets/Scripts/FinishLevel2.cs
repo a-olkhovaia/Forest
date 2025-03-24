@@ -9,7 +9,7 @@ public class FinishLevel2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("LevelSelectMenu");
+            SceneManager.LoadScene("level3");
         }
     }
 }

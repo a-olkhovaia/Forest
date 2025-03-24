@@ -2579,8 +2579,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5821a47b7e3a5c74cb0ee0a66ee3bfe9, type: 2}
+  m_sharedMaterial: {fileID: -7816395864232071891, guid: 5821a47b7e3a5c74cb0ee0a66ee3bfe9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3919,7 +3919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u0418 \u0433\u0434\u0435 \u044F \u043E\u0447\u0443\u0442\u0438\u043B\u0430\u0441\u044C.
       \u0413\u0434\u0435 \u043C\u043E\u0438 \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0438?
@@ -3927,7 +3927,7 @@ MonoBehaviour:
       \u043D\u0430\u043B\u0435\u0442\u0435\u043B, \u043D\u0430\u0434\u0435\u044E\u0441\u044C
       \u043E\u043D\u0438 \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435"
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u041D\u0430\u0434\u043E \u043D\u0430\u0439\u0442\u0438 \u043E\u0442\u0441\u044E\u0434\u0430
       \u0432\u044B\u0445\u043E\u0434 "
@@ -3937,7 +3937,7 @@ MonoBehaviour:
     line: "\u042F \u0440\u0430\u043D\u044C\u0448\u0435 \u0442\u0435\u0431\u044F \u043D\u0435
       \u0432\u0438\u0434\u0435\u043B."
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u0422\u044B \u0440\u0430\u0437\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u0435\u0448\u044C??"
   - speaker:
@@ -3945,15 +3945,15 @@ MonoBehaviour:
       portrait: {fileID: 0}
     line: "\u041D\u0443 \u0434\u0430, \u0430 \u043A\u0430\u043A \u0436\u0435? "
   - speaker:
-      name: "\u041F\u0451\u0441"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u041D\u043E \u0441\u043E\u0431\u0430\u043A\u0438 \u043D\u0435 \u0440\u0430\u0437\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u044E\u0442 "
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u0430\u0445\u0430\u0445"
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u041F\u043E\u0445\u043E\u0436\u0435 \u044F \u0441\u0445\u043E\u0436\u0443
       \u0441 \u0443\u043C\u0430"
@@ -3966,7 +3966,7 @@ MonoBehaviour:
       \u0447\u0442\u043E \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C
       \u044D\u0442\u043E \u0438 \u0435\u0441\u0442\u044C \u0438\u0441\u0442\u0438\u043D\u0430 "
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u041D\u043E \u0440\u0430\u0437\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u0442\u044C
       \u0441\u043E\u0431\u0430\u043A\u0438 \u043D\u0435 \u0434\u043E\u043B\u0436\u043D\u044B "
@@ -3981,7 +3981,7 @@ MonoBehaviour:
       portrait: {fileID: 0}
     line: ...
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u042F \u043F\u043E\u0442\u0435\u0440\u044F\u043B\u0430 \u0441\u0432\u043E\u0438\u0445
       \u0440\u043E\u0434\u0438\u0442\u0435\u043B\u0435\u0439, \u0442\u044B \u0438\u0445
@@ -3995,7 +3995,7 @@ MonoBehaviour:
       \u041E\u043D \u0447\u0430\u0441\u0442\u043E \u043B\u0435\u0442\u0430\u0435\u0442
       \u043D\u0430\u0434 \u043B\u0435\u0441\u043E\u043C "
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u0418 \u0433\u0434\u0435 \u0435\u0433\u043E \u043D\u0430\u0439\u0442\u0438? "
   - speaker:
@@ -4003,7 +4003,7 @@ MonoBehaviour:
       portrait: {fileID: 0}
     line: "\u041D\u0435 \u0437\u043D\u0430\u044E "
   - speaker:
-      name: "\u0413\u0413"
+      name: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430"
       portrait: {fileID: 0}
     line: "\u041B\u0430\u0434\u043D\u043E. \u041C\u043D\u0435 \u043D\u0435\u043A\u043E\u0433\u0434\u0430
       \u0441 \u0442\u043E\u0431\u043E\u0439 \u043E\u0431\u0449\u0430\u0442\u044C\u0441\u044F.
@@ -6381,8 +6381,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 48fe1ddaaac42384a9364c68e7302528, type: 2}
-  m_sharedMaterial: {fileID: 7316922405379918856, guid: 48fe1ddaaac42384a9364c68e7302528, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5821a47b7e3a5c74cb0ee0a66ee3bfe9, type: 2}
+  m_sharedMaterial: {fileID: -7816395864232071891, guid: 5821a47b7e3a5c74cb0ee0a66ee3bfe9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
