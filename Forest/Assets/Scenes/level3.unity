@@ -925,7 +925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 126261181}
   - component: {fileID: 126261180}
-  - component: {fileID: 126261179}
+  - component: {fileID: 126261182}
   m_Layer: 0
   m_Name: FinishZone
   m_TagString: Untagged
@@ -933,18 +933,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &126261179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126261178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14801ff4160992b47afd510b877cd299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &126261180
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1005,6 +993,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &126261182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126261178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9196fd0d8a50946850b2ec9b887bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &135452758
 GameObject:
   m_ObjectHideFlags: 0

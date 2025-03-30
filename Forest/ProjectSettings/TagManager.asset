@@ -8,6 +8,7 @@ TagManager:
   - Points (for monsters)
   - Monster
   - MovableObject
+  - Star
   layers:
   - Default
   - TransparentFX
