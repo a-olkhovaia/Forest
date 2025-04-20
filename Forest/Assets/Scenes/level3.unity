@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d295b24e8ca3e4889d86bb1de8b453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostedJumpForce: 15
+  boostedJumpForce: 18
 --- !u!61 &139956574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16938,7 +16938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4579f83c7a38bbe4da442364fb749677, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c93ae352bc3af0f46bdb4dca733d0b4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
