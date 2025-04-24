@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-//временное решение
 public class PF : MonoBehaviour
 {
     Rigidbody2D rb;

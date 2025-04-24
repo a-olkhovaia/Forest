@@ -9,6 +9,7 @@ TagManager:
   - Monster
   - MovableObject
   - Star
+  - boss
   layers:
   - Default
   - TransparentFX
