@@ -5,7 +5,7 @@ using UnityEngine.Rendering.UI;
 
 public class health : MonoBehaviour
 {
-    public int hp;
+    public float hp;
     GameObject hpbr;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,6 @@ public class health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hpbr.transform.localScale = new Vector2(hp * 2, 0.5f);
+        hpbr.transform.localScale = new Vector2((hp / 5), 0.05f);
     }
 }
