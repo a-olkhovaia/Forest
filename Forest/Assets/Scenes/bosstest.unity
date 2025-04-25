@@ -737,6 +737,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: 0f612440bf7d1294eaa704c45420f31b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ef8be5babc8c7ef42a51360054156ca7, type: 2}
     - target: {fileID: 7878350319992209165, guid: 0f612440bf7d1294eaa704c45420f31b, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.7676
@@ -862,6 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be03ef76b5c6fa84fbb498ad69090707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxhp: 5
   hp: 5
 --- !u!1 &1061902307
 GameObject:
@@ -916,10 +921,10 @@ BoxCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
