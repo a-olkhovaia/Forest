@@ -89,16 +89,15 @@ public class PF : MonoBehaviour
     }
     void bosscam()
     {
-        Vector3 cameraToObject = transform.position - Camera.main.transform.position;
-        float distance = -Vector3.Project(cameraToObject, Camera.main.transform.forward).z;
+        float dist = -Vector3.Project((transform.position - Camera.main.transform.position), Camera.main.transform.forward).z;
 
-        Vector3 leftBot = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));
-        Vector3 rightTop = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, distance));
+        Vector3 leftBot = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist));
+        Vector3 rightTop = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, dist));
 
-        float x_left = leftBot.x;
-        float x_right = rightTop.x;
-        float y_top = rightTop.y;
-        float y_bot = leftBot.y;
+        float x_left = leftBot.x + 0.5f;
+        float x_right = rightTop.x - 0.5f;
+        float y_top = rightTop.y + 0.5f;
+        float y_bot = leftBot.y - 0.5f;
 
         Vector3 clampedPos = transform.position;
         clampedPos.x = Mathf.Clamp(clampedPos.x, x_left, x_right);

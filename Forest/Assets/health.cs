@@ -19,6 +19,6 @@ public class health : MonoBehaviour
     void Update()
     {
         hpbr.transform.localScale = new Vector2((hp / maxhp), 0.05f);
-        if (hp <= 0) hp = 0;
+        if (hp < 0) hp = 0;
     }
 }
