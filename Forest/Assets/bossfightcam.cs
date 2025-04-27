@@ -15,6 +15,6 @@ public class bossfightcam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position,new Vector3(destx,desty, transform.position.z),3 * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(destx, desty, transform.position.z), 3 * Time.deltaTime);
     }
 }

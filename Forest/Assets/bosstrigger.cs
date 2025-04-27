@@ -23,6 +23,7 @@ public class bosstrigger : MonoBehaviour
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>().enabled = false;
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<bossfightcam>().enabled = true;
             GameObject.FindGameObjectWithTag("hpbar").transform.localPosition = new Vector3(-5f,-4.5f,10);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PF>().bossfight = true;
         }
     }
 }
