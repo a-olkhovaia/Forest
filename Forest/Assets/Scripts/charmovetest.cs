@@ -96,12 +96,10 @@ public class PF : MonoBehaviour
 
         float x_left = leftBot.x + 0.5f;
         float x_right = rightTop.x - 0.5f;
-        float y_top = rightTop.y + 0.5f;
-        float y_bot = leftBot.y - 0.5f;
 
         Vector3 clampedPos = transform.position;
+        if (Mathf.Clamp(clampedPos.x, x_left, x_right) != clampedPos.x) rb.velocity = new Vector2(0,rb.velocity.y); ;
         clampedPos.x = Mathf.Clamp(clampedPos.x, x_left, x_right);
-        clampedPos.y = Mathf.Clamp(clampedPos.y, y_bot, y_top);
         transform.position = clampedPos;
     }
 }
