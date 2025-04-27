@@ -5,7 +5,6 @@ using UnityEngine;
 public class behaviour : MonoBehaviour
 {
     GameObject player;
-    public float movspeed;
     public float speedchange;
     Rigidbody2D rb;
     float x;
@@ -19,7 +18,6 @@ public class behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(movspeed, rb.velocity.y);
         Flip();
         if (x == transform.localPosition.x) transform.localPosition = new Vector2(x, transform.localPosition.y + 0.0001f);
         x = transform.localPosition.x;
@@ -27,14 +25,14 @@ public class behaviour : MonoBehaviour
     private void FixedUpdate()
     {
         if (player.transform.localPosition.x < transform.localPosition.x)
-            movspeed -= speedchange;
-        else movspeed += speedchange;
+            rb.velocity = new Vector2(rb.velocity.x - speedchange, rb.velocity.y);
+        else rb.velocity = new Vector2(rb.velocity.x + speedchange, rb.velocity.y);
     }
     void Flip()
     {
-        if (movspeed > 0)
+        if (rb.velocity.x > 0)
             transform.localRotation = Quaternion.Euler(0, 180, 0);
-        if (movspeed < 0)
+        if (rb.velocity.x < 0)
             transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 }
