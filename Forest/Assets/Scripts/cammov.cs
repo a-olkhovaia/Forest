@@ -11,10 +11,11 @@ public class CameraScript : MonoBehaviour
     }
     void LateUpdate()
     {
-        Vector3 temp = transform.position;
-        temp.x = player.position.x;
-        temp.y = player.position.y;
-        
-        transform.position = temp;
+            Vector3 temp = transform.position;
+            temp.x = player.position.x;
+            temp.y = player.position.y;
+
+            transform.position = temp;
+
     }
 }

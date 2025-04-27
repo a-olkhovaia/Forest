@@ -19,13 +19,16 @@ public class behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.localPosition.x < transform.localPosition.x)
-            movspeed -= speedchange;
-        else movspeed += speedchange;
         rb.velocity = new Vector2(movspeed, rb.velocity.y);
         Flip();
         if (x == transform.localPosition.x) transform.localPosition = new Vector2(x, transform.localPosition.y + 0.0001f);
         x = transform.localPosition.x;
+    }
+    private void FixedUpdate()
+    {
+        if (player.transform.localPosition.x < transform.localPosition.x)
+            movspeed -= speedchange;
+        else movspeed += speedchange;
     }
     void Flip()
     {
