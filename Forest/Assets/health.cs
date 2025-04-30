@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Rendering.UI;
 
@@ -19,6 +20,10 @@ public class health : MonoBehaviour
     void Update()
     {
         hpbr.transform.localScale = new Vector2((hp / maxhp), 0.05f);
-        if (hp < 0) hp = 0;
+    }
+    public void hit()
+    {
+          if (hp <= 0) hp = 0;
+          else hp -= 1;
     }
 }

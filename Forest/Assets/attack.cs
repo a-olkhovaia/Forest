@@ -24,7 +24,7 @@ public class attack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X)) { 
         foreach (var x in touch)
         {
-                if (x.gameObject.CompareTag("boss")) x.GetComponent<health>().hp -= 1;
+                if (x.gameObject.CompareTag("boss")) x.GetComponent<health>().hit();
         } 
         }
     }
