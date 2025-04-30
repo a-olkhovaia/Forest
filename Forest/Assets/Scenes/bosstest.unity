@@ -1288,6 +1288,10 @@ PrefabInstance:
       value: Fox
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: 0f612440bf7d1294eaa704c45420f31b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 0f612440bf7d1294eaa704c45420f31b, type: 3}
       propertyPath: m_TagString
       value: boss
       objectReference: {fileID: 0}
@@ -1638,7 +1642,7 @@ Transform:
   m_GameObject: {fileID: 1273975090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.01, y: -5.89, z: 10}
+  m_LocalPosition: {x: 1.58, y: 7.02, z: 10}
   m_LocalScale: {x: 1, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2002,6 +2006,7 @@ MonoBehaviour:
   moving: 0
   istalking: 0
   maxJumps: 1
+  bossfight: 0
 --- !u!4 &1627088517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: e090f00ce6734c8489a572f8cd4481cf, type: 3}

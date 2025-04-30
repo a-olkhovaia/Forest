@@ -25,7 +25,8 @@ public class attack : MonoBehaviour
         foreach (var x in touch)
         {
                 if (x.gameObject.CompareTag("boss")) x.GetComponent<health>().hit();
-        } 
+                GetComponentInParent<Animator>().Play("attack");
+            } 
         }
     }
 

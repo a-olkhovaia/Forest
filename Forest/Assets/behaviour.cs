@@ -9,6 +9,7 @@ public class behaviour : MonoBehaviour
     Rigidbody2D rb;
     float x;
     private Animator anim;
+    float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,11 @@ public class behaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timer <= 0) timer = 30;
         Flip();
         if (x == transform.localPosition.x) transform.localPosition = new Vector2(x, transform.localPosition.y + 0.0001f);
         x = transform.localPosition.x;
+
     }
     private void FixedUpdate()
     {

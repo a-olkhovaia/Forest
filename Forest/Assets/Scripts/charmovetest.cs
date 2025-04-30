@@ -21,7 +21,7 @@ public class PF : MonoBehaviour
     private int jumpCount;         
     public int maxJumps = 2;
     public bool bossfight;
-
+    public 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
