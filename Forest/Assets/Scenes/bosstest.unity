@@ -439,7 +439,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.22352943, g: 0.22352943, b: 0.22352943, a: 0.39215687}
+  m_Color: {r: 0.22352943, g: 0.22352943, b: 0.22352943, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1384,6 +1384,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ef8be5babc8c7ef42a51360054156ca7, type: 2}
+    - target: {fileID: 3626916397498700004, guid: 0f612440bf7d1294eaa704c45420f31b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 0f612440bf7d1294eaa704c45420f31b, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.7676
@@ -1517,6 +1521,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxhp: 5
   hp: 5
+  invinctimer: 0
+  invtime: 3
 --- !u!50 &1035807352
 Rigidbody2D:
   serializedVersion: 4
@@ -1557,6 +1563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedchange: 0.1
+  timer: 0
 --- !u!1 &1061902307
 GameObject:
   m_ObjectHideFlags: 0
