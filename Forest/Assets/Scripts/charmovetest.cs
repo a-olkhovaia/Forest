@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class PF : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -21,11 +22,15 @@ public class PF : MonoBehaviour
     private int jumpCount;         
     public int maxJumps = 2;
     public bool bossfight;
-    public 
+    public float hp;
+    public int maxhp;
+    GameObject hpbar;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        hpbar = GameObject.Find("mchpbar");
+        hp = maxhp;
     }
 
     void Update()
@@ -65,6 +70,7 @@ public class PF : MonoBehaviour
         anim.SetBool("ismoving", moving);
         anim.SetBool("IsJumping", !isGrounded);
         if (bossfight) bosscam();
+        if (hpbar != null) hpbar.transform.localScale = new Vector3(hp / maxhp,0.05f,1);
     }
 
     void Flip()
@@ -101,5 +107,11 @@ public class PF : MonoBehaviour
         if (Mathf.Clamp(clampedPos.x, x_left, x_right) != clampedPos.x) rb.velocity = new Vector2(0,rb.velocity.y); ;
         clampedPos.x = Mathf.Clamp(clampedPos.x, x_left, x_right);
         transform.position = clampedPos;
+    }
+    void hit()
+    {
+        if (hp > 0) hp -= 1;
+        //если нет здоровья после удара то перс умирает(на данный момент прост перезапускаем сцену)
+        else SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
