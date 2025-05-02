@@ -27,14 +27,20 @@ public class health : MonoBehaviour
         invinctimer -= Time.deltaTime;
         if (invinctimer > 0 && invinctimer % 0.5 < 0.25) spr.color = new Color(1, 1, 1, 0.25f);
         else spr.color = new Color(1, 1, 1, 1);
+        if (hp <= 0) Destroy(gameObject);
     }
     public void hit()
     {
         if (hp <= 0) hp = 0;
         else if (invinctimer < 0)
         {
-            hp -= 1;
             invinctimer = invtime;
+            hp -= 1; 
         }
     }
+
+    //public void TakeDamage(int damage)
+    //{
+    //    hp -= damage;
+    //}
 }
