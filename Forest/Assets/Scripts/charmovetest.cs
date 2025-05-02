@@ -22,14 +22,10 @@ public class PF : MonoBehaviour
     private int jumpCount;         
     public int maxJumps = 2;
     public bool bossfight;
-    public float hp;
-    public int maxhp;
-    GameObject hpbar;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        hpbar = GameObject.Find("mchpbar");
         hp = maxhp;
     }
 
@@ -70,7 +66,6 @@ public class PF : MonoBehaviour
         anim.SetBool("ismoving", moving);
         anim.SetBool("IsJumping", !isGrounded);
         if (bossfight) bosscam();
-        if (hpbar != null) hpbar.transform.localScale = new Vector3(hp / maxhp,0.05f,1);
     }
 
     void Flip()

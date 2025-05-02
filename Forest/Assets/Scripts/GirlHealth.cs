@@ -31,11 +31,11 @@ public class GirlHealth : MonoBehaviour
     }
     public void hit()
     {
-        if (hp <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        else if (invinctimer < 0)
+        if (invinctimer < 0)
         {
             invinctimer = invtime;
             hp -= 1;
         }
+        if (hp <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
