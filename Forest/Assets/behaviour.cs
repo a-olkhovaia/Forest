@@ -27,7 +27,7 @@ public class behaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         anim = GetComponent<Animator>();
-        rb.velocity = new Vector2(-25, rb.velocity.y);
+        rb.velocity = new Vector2(-20, rb.velocity.y);
         locked = false;
     }
 
@@ -62,7 +62,7 @@ public class behaviour : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x - speedchange, rb.velocity.y);
             else rb.velocity = new Vector2(rb.velocity.x + speedchange, rb.velocity.y);
         else stunned = 0.1f;
-        if (stunned > 0 && locked) rb.velocity /= 2; 
+        if (stunned > 0 && locked) rb.velocity /= 1.1f; 
         if (Mathf.Abs(rb.velocity.x) > 1) anim.SetBool("isrunning", true);
         else anim.SetBool("isrunning", false);
         if (locked) bosscam();
