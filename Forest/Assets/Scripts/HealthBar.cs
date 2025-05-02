@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
     public float maxHealth;
     public void SetHealth(float health)
     {
-        slider.gameObject.SetActive(health < maxHealth); 
+        slider.gameObject.SetActive(health > 0); 
         slider.value = health; 
         slider.maxValue = maxHealth; 
     }

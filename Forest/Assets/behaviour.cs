@@ -43,10 +43,10 @@ public class behaviour : MonoBehaviour
         Flip();
         if (x == transform.localPosition.x) transform.localPosition = new Vector2(x, transform.localPosition.y + 0.0001f);
         x = transform.localPosition.x;
-        if (Mathf.Abs(timer-30) < Time.fixedDeltaTime)
+        if (Mathf.Abs(timer - 30) < Time.fixedDeltaTime)
             if (rb.velocity.x < 0) goright = false;
             else goright = true;
-        if (Mathf.Abs(xleft - transform.position.x) < 2) goright=true;
+        if (Mathf.Abs(xleft - transform.position.x) < 2) goright = true;
         else if (Mathf.Abs(xright - transform.position.x) < 2) goright = false;
         if (timer < 29) locked = true;
         stunned -= Time.deltaTime;
@@ -62,7 +62,7 @@ public class behaviour : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x - speedchange, rb.velocity.y);
             else rb.velocity = new Vector2(rb.velocity.x + speedchange, rb.velocity.y);
         else stunned = 0.1f;
-        if (stunned > 0 && locked) rb.velocity /= 2; 
+        if (stunned > 0 && locked) rb.velocity /= 2;
         if (Mathf.Abs(rb.velocity.x) > 1) anim.SetBool("isrunning", true);
         else anim.SetBool("isrunning", false);
         if (locked) bosscam();
@@ -86,5 +86,10 @@ public class behaviour : MonoBehaviour
         }
         clampedPos.x = Mathf.Clamp(clampedPos.x, xleft, xright);
         transform.position = clampedPos;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player")) collision.gameObject.GetComponent<GirlHealth>().hit();
     }
 }
