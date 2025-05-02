@@ -21,6 +21,7 @@ public class behaviour : MonoBehaviour
     public float stunned;
     public float stuntime;
     public float stunspeed;
+    public List<GameObject> touch;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,13 +44,14 @@ public class behaviour : MonoBehaviour
         Flip();
         if (x == transform.localPosition.x) transform.localPosition = new Vector2(x, transform.localPosition.y + 0.0001f);
         x = transform.localPosition.x;
-        if (Mathf.Abs(timer-30) < Time.fixedDeltaTime)
+        if (Mathf.Abs(timer - 30) < Time.fixedDeltaTime)
             if (rb.velocity.x < 0) goright = false;
             else goright = true;
-        if (Mathf.Abs(xleft - transform.position.x) < 2) goright=true;
+        if (Mathf.Abs(xleft - transform.position.x) < 2) goright = true;
         else if (Mathf.Abs(xright - transform.position.x) < 2) goright = false;
         if (timer < 29) locked = true;
         stunned -= Time.deltaTime;
+        foreach (var x in touch) if (x.gameObject.CompareTag("Player")) x.GetComponent<GirlHealth>().hit();
     }
     private void FixedUpdate()
     {
@@ -86,5 +88,15 @@ public class behaviour : MonoBehaviour
         }
         clampedPos.x = Mathf.Clamp(clampedPos.x, xleft, xright);
         transform.position = clampedPos;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        touch.Add(collision.gameObject);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        touch.Remove(collision.gameObject);
     }
 }
