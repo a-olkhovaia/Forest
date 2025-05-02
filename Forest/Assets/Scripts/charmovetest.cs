@@ -19,28 +19,27 @@ public class PF : MonoBehaviour
     public bool istalking;
     private float movspeed;
 
-    private int jumpCount;         
+    private int jumpCount;
     public int maxJumps = 2;
     public bool bossfight;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        hp = maxhp;
     }
 
     void Update()
     {
-        
+
         isGrounded = Physics2D.OverlapCircle(feetPos.position, CheckRadius, whatIsGround);
 
-        
+
         if (isGrounded)
         {
             jumpCount = 0;
         }
 
-        
+
         if (istalking)
         {
             movspeed = 0;
@@ -54,14 +53,14 @@ public class PF : MonoBehaviour
 
         rb.velocity = new Vector2(movspeed * speed, rb.velocity.y);
 
-        
+
         if (Input.GetKeyDown(KeyCode.Space) && !istalking && jumpCount < maxJumps)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpHeight); 
-            jumpCount++; 
+            rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+            jumpCount++;
         }
 
-        
+
         moving = rb.velocity.x != 0 ? true : false;
         anim.SetBool("ismoving", moving);
         anim.SetBool("IsJumping", !isGrounded);
@@ -99,14 +98,8 @@ public class PF : MonoBehaviour
         float x_right = rightTop.x - 0.5f;
 
         Vector3 clampedPos = transform.position;
-        if (Mathf.Clamp(clampedPos.x, x_left, x_right) != clampedPos.x) rb.velocity = new Vector2(0,rb.velocity.y); ;
+        if (Mathf.Clamp(clampedPos.x, x_left, x_right) != clampedPos.x) rb.velocity = new Vector2(0, rb.velocity.y); ;
         clampedPos.x = Mathf.Clamp(clampedPos.x, x_left, x_right);
         transform.position = clampedPos;
-    }
-    void hit()
-    {
-        if (hp > 0) hp -= 1;
-        //если нет здоровья после удара то перс умирает(на данный момент прост перезапускаем сцену)
-        else SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
