@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level4.unity
     guid: 2e935786aab84d2488100258a3bb94de
+  - enabled: 1
+    path: Assets/Scenes/bosstest.unity
+    guid: 44b548dad51fcdd4baf93567bcb1fc9c
+  - enabled: 1
+    path: Assets/Scenes/FinishScene1.unity
+    guid: cbcb1c70897e4564498efc61d90fd626
+  - enabled: 1
+    path: Assets/Scenes/FinishScene2.unity
+    guid: eeed09e413f52f3439ffa2155bae512c
+  - enabled: 1
+    path: Assets/Scenes/FinishScene3.unity
+    guid: 6b6e82b21b14990438b1db56844c1f43
+  - enabled: 1
+    path: Assets/Scenes/level5.unity
+    guid: a94d47eaef2f8c94f96ffebb0534dbc0
   m_configObjects: {}

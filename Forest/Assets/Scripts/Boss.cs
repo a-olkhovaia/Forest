@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
-        if (Health.hp <= 0) Destroy(gameObject);
+        if (Health.hp <= 0)
+        {
+            SceneManager.LoadScene("FinishScene1");
+        }
     }
 
     public void TakeDamage(int damage)
