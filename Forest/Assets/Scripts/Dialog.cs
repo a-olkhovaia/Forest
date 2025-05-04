@@ -12,17 +12,20 @@ public class Dialog : MonoBehaviour
     [SerializeField] private Image portrait;
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private GameObject ButtonPanel;
+    [SerializeField] private GameObject SkipButtonPanel;
     private int idx = 0;
 
     private void OnEnable()
     {
         ButtonPanel.SetActive(true);
+        SkipButtonPanel.SetActive(true);
     }
 
     private void Start()
     {
         gameObject.SetActive(false);
         ButtonPanel.SetActive(false);
+        SkipButtonPanel.SetActive(false);
         text.text = "";
         nameText.text = "";
     }
@@ -34,6 +37,11 @@ public class Dialog : MonoBehaviour
             StopAllCoroutines();
             text.text = "";
             NextLine();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PF>().istalking = false;
+            gameObject.SetActive(false);
         }
     }
 
