@@ -9,7 +9,7 @@ public class FinishLevel4 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("LevelSelectMenu");
+            SceneManager.LoadScene("level5");
         }
     }
 }
